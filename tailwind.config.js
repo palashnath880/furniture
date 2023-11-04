@@ -5,7 +5,18 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'Gilroy-Bold': ['Gilroy-Bold', 'sans-serif'],
+        'Gilroy-Heavy': ['Gilroy-Heavy', 'sans-serif'],
+        'Gilroy-Light': ['Gilroy-Light', 'sans-serif'],
+        'Gilroy-Medium': ['Gilroy-Medium', 'sans-serif'],
+        'Gilroy-Regular': ['Gilroy-Regular', 'sans-serif']
+      },
+      colors: {
+        'secondary': '#E58411',
+      }
+    },
   },
   plugins: [],
 }
