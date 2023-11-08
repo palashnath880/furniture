@@ -11,7 +11,8 @@ export default {
         'Gilroy-Heavy': ['Gilroy-Heavy', 'sans-serif'],
         'Gilroy-Light': ['Gilroy-Light', 'sans-serif'],
         'Gilroy-Medium': ['Gilroy-Medium', 'sans-serif'],
-        'Gilroy-Regular': ['Gilroy-Regular', 'sans-serif']
+        'Gilroy-Regular': ['Gilroy-Regular', 'sans-serif'],
+        'Rowdies': ['Rowdies', 'sans-serif']
       },
       colors: {
         'secondary': '#E58411',

@@ -1,5 +1,5 @@
-import { BsArrowRight } from 'react-icons/bs';
 import { FaFacebookF, FaGithub, FaGlobe, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import woodImg from '../assets/wood-bg.webp';
 
 const Footer = () => {
     return (
@@ -7,7 +7,16 @@ const Footer = () => {
             <div className="container mx-auto px-5 max-sm:px-3 pt-10 pb-10">
                 <div className="grid grid-cols-2 sm:grid-cols-3 max-lg:gap-y-10 lg:grid-cols-5 gap-5">
                     <div className="col-span-2 sm:col-span-3 lg:col-span-2">
-                        <h2 className="text-3xl font-Gilroy-Medium">Furniture</h2>
+                        <h2
+                            className="text-5xl font-Rowdies bg-repeat w-fit text-transparent"
+                            style={{
+                                backgroundImage: `url(${woodImg})`,
+                                WebkitBackgroundClip: 'text',
+                                WebkitTextFillColor: 'transparent',
+                            }}
+                        >
+                            Furniture
+                        </h2>
                         <p className="mt-5 text-sm font-Gilroy-Medium max-w-[300px]">The advantage of hiring a workspace with us is that givees you comfortable service and all-around facilities.</p>
                     </div>
                     <div className="col-span-1">
