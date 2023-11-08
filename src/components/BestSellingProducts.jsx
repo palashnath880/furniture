@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { SwiperSlide, Swiper } from 'swiper/react'
 import 'swiper/css';
+import { FaCartPlus } from 'react-icons/fa';
 
 //assets
 import bedImg1 from '../assets/product/bed-1.webp';
@@ -57,32 +58,88 @@ const BestSellingProducts = () => {
         ],
         bed: [
             {
-                title: "Eames Lounge Chair",
+                title: "Bed One",
                 price: 5000,
-                img: chairImg1
+                img: bedImg1
             },
             {
-                title: "Aeron Chair",
+                title: "Bed Two",
                 price: 1000,
-                img: chairImg2
+                img: bedImg2
             },
             {
-                title: "Wishbone Chair",
+                title: "Bed Three",
                 price: 500,
-                img: chairImg3
+                img: bedImg3
             },
             {
-                title: "Tolix Chair",
+                title: "Bed Four",
                 price: 200,
-                img: chairImg1
+                img: bedImg1
             },
             {
-                title: "IKEA Poäng Chair",
+                title: "Bed Five",
                 price: 100,
-                img: chairImg4
+                img: bedImg4
+            }
+        ],
+        sofa: [
+            {
+                title: "Sofa One",
+                price: 5000,
+                img: sofaImg1
+            },
+            {
+                title: "Sofa Two",
+                price: 1000,
+                img: sofaImg2
+            },
+            {
+                title: "Sofa Three",
+                price: 500,
+                img: sofaImg3
+            },
+            {
+                title: "Sofa Four",
+                price: 200,
+                img: sofaImg1
+            },
+            {
+                title: "Sofa Five",
+                price: 100,
+                img: sofaImg4
+            }
+        ],
+        lamp: [
+            {
+                title: "Lamp One",
+                price: 5000,
+                img: lampImg1
+            },
+            {
+                title: "Lamp Two",
+                price: 1000,
+                img: lampImg2
+            },
+            {
+                title: "Lamp Three",
+                price: 500,
+                img: lampImg3
+            },
+            {
+                title: "Lamp Four",
+                price: 200,
+                img: lampImg1
+            },
+            {
+                title: "Lamp Five",
+                price: 100,
+                img: lampImg4
             }
         ],
     };
+
+    console.log(data[tabs[activeTab]])
 
     return (
         <section>
@@ -101,44 +158,25 @@ const BestSellingProducts = () => {
                         slidesPerView={4}
                         spaceBetween={10}
                         loop={true}
+                        autoplay={true}
                     >
-                        {activeTab === 0 && [chairImg1, chairImg2, chairImg3, chairImg4].map((img, index) => <SwiperSlide key={index}>
+                        {Array.isArray(data[tabs[activeTab].toLowerCase()]) && data[tabs[activeTab].toLowerCase()].map(({ img, title, price }, index) => <SwiperSlide key={index} className="!py-5">
                             <div className="">
-                                <div>
-                                    <img src={img} alt={img} className="" />
+                                <div className="aspect-square">
+                                    <img src={img} alt={img} className="w-full h-full object-cover" />
                                 </div>
-                                <div className="flex flex-col">
-                                    <h3 className="">{index + 1}</h3>
-                                </div>
-                            </div>
-                        </SwiperSlide>)}
-                        {activeTab === 1 && [bedImg1, bedImg2, bedImg3, bedImg4].map((img, index) => <SwiperSlide key={index}>
-                            <div className="">
-                                <div>
-                                    <img src={img} alt={img} className="" />
-                                </div>
-                                <div className="flex flex-col">
-                                    <h3 className="">{index + 1}</h3>
-                                </div>
-                            </div>
-                        </SwiperSlide>)}
-                        {activeTab === 2 && [sofaImg1, sofaImg2, sofaImg3, sofaImg4].map((img, index) => <SwiperSlide key={index}>
-                            <div className="">
-                                <div>
-                                    <img src={img} alt={img} className="" />
-                                </div>
-                                <div className="flex flex-col">
-                                    <h3 className="">{index + 1}</h3>
-                                </div>
-                            </div>
-                        </SwiperSlide>)}
-                        {activeTab === 3 && [lampImg1, lampImg2, lampImg3, lampImg4].map((img, index) => <SwiperSlide key={index}>
-                            <div className="">
-                                <div>
-                                    <img src={img} alt={img} className="" />
-                                </div>
-                                <div className="flex flex-col">
-                                    <h3 className="">{index + 1}</h3>
+                                <div className="flex flex-col bg-white px-4 py-5 shadow-lg">
+                                    <p className="font-Gilroy-Light text-[#8D8D8D]">{tabs[activeTab]}</p>
+                                    <h3 className="font-Gilroy-Medium text-xl">{title}</h3>
+                                    <div className="flex justify-between mt-4">
+                                        <p className="font-Gilroy-Bold flex gap-1 items-start">
+                                            <span>$</span>
+                                            <span className="text-xl">{price}</span>
+                                        </p>
+                                        <button className="duration-200 hover:text-secondary">
+                                            <FaCartPlus className="w-5 h-5" />
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </SwiperSlide>)}
