@@ -5,8 +5,8 @@ const Footer = () => {
     return (
         <footer>
             <div className="container mx-auto px-5 max-sm:px-3 pt-10 pb-10">
-                <div className="grid grid-cols-5 gap-5">
-                    <div className="col-span-2">
+                <div className="grid grid-cols-2 sm:grid-cols-3 max-lg:gap-y-10 lg:grid-cols-5 gap-5">
+                    <div className="col-span-2 sm:col-span-3 lg:col-span-2">
                         <h2 className="text-3xl font-Gilroy-Medium">Furniture</h2>
                         <p className="mt-5 text-sm font-Gilroy-Medium max-w-[300px]">The advantage of hiring a workspace with us is that givees you comfortable service and all-around facilities.</p>
                     </div>
@@ -48,7 +48,7 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="col-span-1">
+                    <div className="col-span-2 sm:col-span-1">
                         <p className="text-secondary font-Gilroy-Medium tracking-wide">Follow Us</p>
                         <ul className="mt-5 pl-3 space-y-4 text-sm font-Gilroy-Medium">
                             <li>
@@ -86,8 +86,11 @@ const Footer = () => {
                 </div>
             </div>
             <div className="container mx-auto px-5 py-7 border-t">
-                <div className="flex items-center justify-between">
-                    <p className="font-Gilroy-Medium text-[#1E2833] text-sm">Copyright © {new Date().getFullYear()} | Developed by <a className="underline hover:no-underline duration-200" href='' rel='noreferrer'>Palash Nath</a></p>
+                <div className="flex max-sm:flex-col max-sm:gap-5 items-center sm:justify-between">
+                    <p className="font-Gilroy-Medium text-[#1E2833] text-sm">
+                        Copyright © {new Date().getFullYear()} | Developed by
+                        <a className="underline hover:no-underline duration-200" href='https://palashnath.netlify.app' target='_blank' rel='noreferrer'>Palash Nath</a>
+                    </p>
                     <div className="justify-center flex gap-10 text-sm">
                         <span className="font-Gilroy-Medium text-[#1E2833]">Terms & Conditions</span>
                         <span className="font-Gilroy-Medium text-[#1E2833]">Privacy Policy</span>
