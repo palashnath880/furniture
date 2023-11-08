@@ -12,6 +12,7 @@ import horizontalBed from './assets/horizontal-bed.webp';
 import horizontalSofa from './assets/horizontal-sofa.webp';
 import lamp1 from './assets/lamp-1.webp';
 import lamp2 from './assets/lamp-2.webp';
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -101,6 +102,8 @@ const App = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
 
     </div>
   );
