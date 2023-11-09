@@ -61,7 +61,7 @@ const HeroArea = () => {
 
             <div className='mx-auto px-5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full md:w-[700px]'>
                 <div className='flex flex-col items-center gap-7'>
-                    <h1 className='text-6xl font-Gilroy-Bold text-center text-white leading-tight'>
+                    <h1 className='max-sm:text-4xl text-6xl font-Gilroy-Bold text-center text-white leading-tight'>
                         Make your interior more minimalistic & modern
                     </h1>
                     <p className='text-base text-white font-Gilroy-Light text-center'>
