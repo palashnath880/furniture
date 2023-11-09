@@ -21,14 +21,14 @@ const WhyChoose = () => {
     return (
         <section className="bg-white">
             <div className="container mx-auto px-5 max-sm:px-3 py-20">
-                <div className="flex gap-10">
-                    <div className="w-1/5">
-                        <h1 className="font-Gilroy-Bold text-4xl leading-tight">
-                            Why <br /> Choosing Us
+                <div className="flex max-md:flex-col gap-10">
+                    <div className="w-full md:w-1/5">
+                        <h1 className="font-Gilroy-Bold max-sm:text-3xl text-4xl leading-tight">
+                            Why <br className='max-md:hidden' /> Choosing Us
                         </h1>
                     </div>
-                    <div className="w-4/5">
-                        <div className="grid grid-cols-3 gap-5">
+                    <div className="w-full md:w-4/5">
+                        <div className="grid max-sm:grid-cols-1 grid-cols-3 gap-5">
                             {data.map(({ content, title }, index) => <div key={index} className="flex flex-col gap-4">
                                 <h3 className="text-xl font-Gilroy-Bold">{title}</h3>
                                 <p className="font-Gilroy-Regular text-[#1E1E1E]">{content}</p>
