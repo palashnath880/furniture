@@ -16,7 +16,9 @@ const Header = () => {
                         <span className='h-1 w-full rounded-full block bg-white duration-200 group-[.active]:opacity-0 group-[.active]:translate-x-full' />
                         <span className='h-1 w-full rounded-full block bg-white duration-200 origin-bottom-right transform group-[.active]:rotate-45 group-[.active]:w-[-110%]' />
                     </button>
-                    <h2 className="text-white text-xl font-medium">Furniture</h2>
+
+                    <h2 className="tracking-widest text-transparent text-2xl font-Rowdies" style={{ WebkitTextStrokeWidth: '0.5px', WebkitTextStrokeColor: 'white' }}>Furniture</h2>
+
                     <div className={`max-md:absolute max-md:top-full max-md:bg-white max-md:bg-opacity-80  max-md:py-6 max-md:rounded-2xl max-md:w-11/12 max-md:h-auto max-md:-translate-x-1/2 max-md:left-1/2 max-md:duration-200 origin-top ${isOpen ? 'max-md:scale-y-0' : 'max-md:scale-y-100'}`}>
                         <ul className="flex max-md:flex-col items-center font-Gilroy-Medium text-white max-md:text-black max-md:gap-3 gap-12 text-base">
                             <li className="relative cursor-pointer after:content-[''] after:absolute after:h-[2px] after:duration-200 hover:after:w-full after:w-0 after:bg-white after:bottom-0 after:left-0">
