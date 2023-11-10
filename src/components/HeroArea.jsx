@@ -68,7 +68,7 @@ const HeroArea = () => {
                         Turn your room with panto into a lot more minimalist <br />
                         and modern with ease and speed
                     </p>
-                    <div className='w-[400px] mx-auto font-Gilroy-Light flex items-center rounded-full p-2 overflow-hidden bg-[#FFFFFF26] border border-[#FFFFFF99]'>
+                    <div className='w-full sm:w-[400px] mx-auto font-Gilroy-Light flex items-center rounded-full p-2 overflow-hidden bg-[#FFFFFF26] border border-[#FFFFFF99]'>
                         <input type='text' placeholder='Search furniture' className='flex-1 px-2 bg-transparent outline-none border-none text-white' />
                         <button className='w-8 aspect-square grid place-items-center rounded-full bg-secondary text-white'>
                             <BiSearch className='w-5 h-5' />

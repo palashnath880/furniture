@@ -23,7 +23,7 @@ const WhyChoose = () => {
             <div className="container mx-auto px-5 max-sm:px-3 py-20">
                 <div className="flex max-md:flex-col gap-10">
                     <div className="w-full md:w-1/5">
-                        <h1 className="font-Gilroy-Bold max-sm:text-3xl text-4xl leading-tight">
+                        <h1 className="font-Gilroy-Bold max-md:text-center max-sm:text-3xl text-4xl leading-tight">
                             Why <br className='max-md:hidden' /> Choosing Us
                         </h1>
                     </div>
