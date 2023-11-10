@@ -145,7 +145,7 @@ const BestSellingProducts = () => {
         <section>
             <div className="container mx-auto px-5 max-sm:px-3 py-20">
                 <div className="flex flex-col items-center gap-10">
-                    <h1 className="font-Gilroy-Bold text-4xl text-[#1E1E1E]">Best Selling Products</h1>
+                    <h1 className="font-Gilroy-Bold text-4xl text-[#1E1E1E] max-md:text-center max-md:text-3xl">Best Selling Products</h1>
                     <div className="p-2 rounded-full w-fit bg-[#EEEEEE]">
                         {tabs.map((tab, index) => <button onClick={() => setActiveTab(index)} key={index} className={`font-Gilroy-Regular rounded-full px-4 py-2 text-sm duration-300 ${activeTab === index && 'bg-white'}`}>
                             {tab}
@@ -155,23 +155,34 @@ const BestSellingProducts = () => {
                 <div className="mt-10">
                     <Swiper
                         speed={1000}
-                        slidesPerView={4}
+                        slidesPerView={2}
                         spaceBetween={10}
                         loop={true}
                         autoplay={true}
+                        breakpoints={{
+                            640: {
+                                slidesPerView: 2,
+                            },
+                            768: {
+                                slidesPerView: 3
+                            },
+                            1024: {
+                                slidesPerView: 4,
+                            }
+                        }}
                     >
-                        {Array.isArray(data[tabs[activeTab].toLowerCase()]) && data[tabs[activeTab].toLowerCase()].map(({ img, title, price }, index) => <SwiperSlide key={index} className="!py-5">
-                            <div className="">
+                        {Array.isArray(data[tabs[activeTab].toLowerCase()]) && data[tabs[activeTab].toLowerCase()].map(({ img, title, price }, index) => <SwiperSlide key={index} className="!py-5 !h-auto">
+                            <div className="flex flex-col h-full">
                                 <div className="aspect-square">
                                     <img src={img} alt={img} className="w-full h-full object-cover" />
                                 </div>
-                                <div className="flex flex-col bg-white px-4 py-5 shadow-lg">
-                                    <p className="font-Gilroy-Light text-[#8D8D8D]">{tabs[activeTab]}</p>
-                                    <h3 className="font-Gilroy-Medium text-xl">{title}</h3>
+                                <div className="flex-1 flex flex-col bg-white max-sm:px-2 px-4 py-5 shadow-lg">
+                                    <p className="font-Gilroy-Light text-[#8D8D8D] max-sm:text-sm">{tabs[activeTab]}</p>
+                                    <h3 className="flex-1 font-Gilroy-Medium text-xl max-sm:text-base">{title}</h3>
                                     <div className="flex justify-between mt-4">
                                         <p className="font-Gilroy-Bold flex gap-1 items-start">
                                             <span>$</span>
-                                            <span className="text-xl">{price}</span>
+                                            <span className="text-xl max-sm:text-base">{price}</span>
                                         </p>
                                         <button className="duration-200 hover:text-secondary">
                                             <FaCartPlus className="w-5 h-5" />
