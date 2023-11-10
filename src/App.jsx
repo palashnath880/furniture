@@ -27,10 +27,10 @@ const App = () => {
       <BestSellingProducts />
 
       {/* experiences */}
-      <section className="py-36 bg-white">
-        <div className="flex items-center gap-20">
-          <div className="w-1/2">
-            <div className="relative z-10 w-[80%]">
+      <section className="max-lg:py-20 py-36 bg-white">
+        <div className="flex items-center max-md:gap-10 max-lg:gap-0 gap-20 max-md:flex-col">
+          <div className="w-full md:w-1/2">
+            <div className="relative z-10 max-lg:w-[88%] w-[80%]">
               <div className="overflow-hidden aspect-[16/12] rounded-r-2xl shadow-2xl">
                 <img src={experienceImg} alt="" className="w-full h-full object-cover" />
               </div>
@@ -38,10 +38,10 @@ const App = () => {
               <div className="absolute -top-9 right-1/3 rounded-2xl bg-[#F7F7F7] w-full h-2/3 -z-10" />
             </div>
           </div>
-          <div className="w-1/2">
-            <div className="flex flex-col gap-y-4 lg:w-[450px]">
+          <div className="w-full md:w-1/2">
+            <div className="flex flex-col gap-y-4 max-lg:px-5 md:max-w-[450px]">
               <span className="text-sm font-Gilroy-Medium text-secondary uppercase tracking-widest">Experiences</span>
-              <h1 className="font-Gilroy-Bold text-4xl leading-tight text-[#1E1E1E]">we provide you the <br /> best experience</h1>
+              <h1 className="font-Gilroy-Bold max-sm:text-3xl text-4xl leading-tight text-[#1E1E1E]">we provide you the <br /> best experience</h1>
               <p className="font-Gilroy-Light text-sm text-[#1E1E1E] leading-relaxed">
                 You don’t have to worry about the result because all of these interiors are made by people who are professionals in their fields with an elegant and lucurious style and with premium quality materials
               </p>

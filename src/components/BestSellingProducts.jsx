@@ -139,8 +139,6 @@ const BestSellingProducts = () => {
         ],
     };
 
-    console.log(data[tabs[activeTab]])
-
     return (
         <section>
             <div className="container mx-auto px-5 max-sm:px-3 py-20">
@@ -172,7 +170,7 @@ const BestSellingProducts = () => {
                         }}
                     >
                         {Array.isArray(data[tabs[activeTab].toLowerCase()]) && data[tabs[activeTab].toLowerCase()].map(({ img, title, price }, index) => <SwiperSlide key={index} className="!py-5 !h-auto">
-                            <div className="flex flex-col h-full">
+                            <div className="flex flex-col h-full bg-white">
                                 <div className="aspect-square">
                                     <img src={img} alt={img} className="w-full h-full object-cover" />
                                 </div>
