@@ -69,16 +69,15 @@ const Testimonial = () => {
                                 slidesPerView: 4
                             }
                         }}
-                        modules={[Navigation]}
-                        navigation={{
-                            nextEl: nextBtnRef.current,
-                            prevEl: prevBtnRef.current,
-                        }}
                         onBeforeInit={(swiper) => {
                             swiper.params.navigation.prevEl = prevBtnRef.current;
                             swiper.params.navigation.nextEl = nextBtnRef.current;
-                            swiper.navigation.update();
                         }}
+                        modules={[Navigation]}
+                    // navigation={{
+                    //     nextEl: nextBtnRef.current,
+                    //     prevEl: prevBtnRef.current,
+                    // }}
                     >
                         {
                             data.map(({ bgImg, content, image, jobTitle, name }, index) => {
