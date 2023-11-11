@@ -98,7 +98,7 @@ const Footer = () => {
                 <div className="flex max-sm:flex-col max-sm:gap-5 items-center sm:justify-between">
                     <p className="font-Gilroy-Medium text-[#1E2833] text-sm">
                         Copyright © {new Date().getFullYear()} | Developed by
-                        <a className="underline hover:no-underline duration-200" href='https://palashnath.netlify.app' target='_blank' rel='noreferrer'>Palash Nath</a>
+                        <a className="underline hover:no-underline duration-200 ml-2" href='https://palashnath.netlify.app' target='_blank' rel='noreferrer'>Palash Nath</a>
                     </p>
                     <div className="justify-center flex gap-10 text-sm">
                         <span className="font-Gilroy-Medium text-[#1E2833]">Terms & Conditions</span>
