@@ -69,18 +69,11 @@ const Testimonial = () => {
                                 slidesPerView: 4
                             }
                         }}
-                        onSwiper={(swiper) => {
-                            swiper.params.navigation.prevEl = prevBtnRef.current;
-                            swiper.params.navigation.nextEl = nextBtnRef.current;
-                            swiper.navigation.destroy();
-                            swiper.navigation.init();
-                            swiper.navigation.update();
-                        }}
                         modules={[Navigation]}
-                    // navigation={{
-                    //     nextEl: nextBtnRef.current,
-                    //     prevEl: prevBtnRef.current,
-                    // }}
+                        navigation={{
+                            nextEl: '#slider_next_btn',
+                            prevEl: '#slider_prev_btn',
+                        }}
                     >
                         {
                             data.map(({ bgImg, content, image, jobTitle, name }, index) => {
@@ -107,11 +100,11 @@ const Testimonial = () => {
                         }
                     </Swiper>
                     <div className="flex justify-center gap-20 mt-5">
-                        <button ref={prevBtnRef} className="flex items-center gap-2 font-Gilroy-Bold text-sm disabled:opacity-50 disabled:cursor-default">
+                        <button id="slider_prev_btn" className="flex items-center gap-2 font-Gilroy-Bold text-sm disabled:opacity-50 disabled:cursor-default">
                             <HiOutlineArrowLongLeft className="w-5 h-5" />
                             Prev
                         </button>
-                        <button ref={nextBtnRef} className="flex items-center gap-2 font-Gilroy-Bold text-sm disabled:opacity-50 disabled:cursor-default">
+                        <button id="slider_next_btn" className="flex items-center gap-2 font-Gilroy-Bold text-sm disabled:opacity-50 disabled:cursor-default">
                             Next
                             <HiOutlineArrowLongRight className="w-5 h-5" />
                         </button>
