@@ -75,34 +75,34 @@ const Testimonial = () => {
                             prevEl: prevBtnRef.current,
                         }}
                         onBeforeInit={(swiper) => {
-                            swiper.params.navigation.nextEl = nextBtnRef.current;
                             swiper.params.navigation.prevEl = prevBtnRef.current;
-                            swiper.navigation.destroy();
-                            swiper.navigation.init();
+                            swiper.params.navigation.nextEl = nextBtnRef.current;
                             swiper.navigation.update();
                         }}
                     >
-                        {data.map(({ bgImg, content, image, jobTitle, name }, index) => {
-                            return <SwiperSlide key={index} className="!pt-5 !pb-10">
-                                <div className="relative aspect-[11/16] rounded-2xl overflow-hidden cursor-pointer shadow-lg">
-                                    <img draggable={false} src={bgImg} alt={'Testimonial Background Image'} className="w-full h-full object-cover" />
-                                    <div className="absolute bottom-0 left-0 w-full h-full p-3 flex flex-col justify-end bg-[#1E1E1E] bg-opacity-20 duration-300 hover:bg-opacity-10">
-                                        <div className="bg-white shadow-2xl px-3 pb-5 pt-9 rounded-xl relative">
-                                            <div className="p-2 w-[70px] bg-white rounded-full absolute -top-[35px] left-1/2 -translate-x-1/2">
-                                                <img draggable={false} src={image} alt={name} className="w-full aspect-square object-cover rounded-full shadow-xl" />
-                                                <span className="absolute w-6 aspect-square block bg-white bottom-1/2 left-full -translate-x-1" style={{ WebkitMaskImage: `radial-gradient(circle 10px at 20px 4px, transparent 0, transparent 20px, black 0px)` }}></span>
-                                                <span className="absolute w-6 aspect-square block bg-white bottom-1/2 right-full translate-x-1" style={{ WebkitMaskImage: `radial-gradient(circle 10px at 4px 4px, transparent 0, transparent 20px, black 0px)` }}></span>
+                        {
+                            data.map(({ bgImg, content, image, jobTitle, name }, index) => {
+                                return <SwiperSlide key={index} className="!pt-5 !pb-10">
+                                    <div className="relative aspect-[11/16] rounded-2xl overflow-hidden cursor-pointer shadow-lg">
+                                        <img draggable={false} src={bgImg} alt={'Testimonial Background Image'} className="w-full h-full object-cover" />
+                                        <div className="absolute bottom-0 left-0 w-full h-full p-3 flex flex-col justify-end bg-[#1E1E1E] bg-opacity-20 duration-300 hover:bg-opacity-10">
+                                            <div className="bg-white shadow-2xl px-3 pb-5 pt-9 rounded-xl relative">
+                                                <div className="p-2 w-[70px] bg-white rounded-full absolute -top-[35px] left-1/2 -translate-x-1/2">
+                                                    <img draggable={false} src={image} alt={name} className="w-full aspect-square object-cover rounded-full shadow-xl" />
+                                                    <span className="absolute w-6 aspect-square block bg-white bottom-1/2 left-full -translate-x-1" style={{ WebkitMaskImage: `radial-gradient(circle 10px at 20px 4px, transparent 0, transparent 20px, black 0px)` }}></span>
+                                                    <span className="absolute w-6 aspect-square block bg-white bottom-1/2 right-full translate-x-1" style={{ WebkitMaskImage: `radial-gradient(circle 10px at 4px 4px, transparent 0, transparent 20px, black 0px)` }}></span>
+                                                </div>
+                                                <div className="flex flex-col items-center gap-0 text-[#1E1E1E] text-center">
+                                                    <h4 className="font-Rowdies text-lg">{name}</h4>
+                                                    <p className="font-Gilroy-Medium text-sm">{jobTitle}</p>
+                                                </div>
+                                                <p className="text-sm font-Gilroy-Light text-[#1E1E1E] text-center mt-4">{content.split('').splice(0, 120).join('')}</p>
                                             </div>
-                                            <div className="flex flex-col items-center gap-0 text-[#1E1E1E] text-center">
-                                                <h4 className="font-Rowdies text-lg">{name}</h4>
-                                                <p className="font-Gilroy-Medium text-sm">{jobTitle}</p>
-                                            </div>
-                                            <p className="text-sm font-Gilroy-Light text-[#1E1E1E] text-center mt-4">{content.split('').splice(0, 120).join('')}</p>
                                         </div>
                                     </div>
-                                </div>
-                            </SwiperSlide>
-                        })}
+                                </SwiperSlide>
+                            })
+                        }
                     </Swiper>
                     <div className="flex justify-center gap-20 mt-5">
                         <button ref={prevBtnRef} className="flex items-center gap-2 font-Gilroy-Bold text-sm disabled:opacity-50 disabled:cursor-default">
@@ -116,7 +116,7 @@ const Testimonial = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }
 
