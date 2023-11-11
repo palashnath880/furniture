@@ -77,6 +77,9 @@ const Testimonial = () => {
                         onBeforeInit={(swiper) => {
                             swiper.params.navigation.nextEl = nextBtnRef.current;
                             swiper.params.navigation.prevEl = prevBtnRef.current;
+                            swiper.navigation.destroy();
+                            swiper.navigation.init();
+                            swiper.navigation.update();
                         }}
                     >
                         {data.map(({ bgImg, content, image, jobTitle, name }, index) => {
