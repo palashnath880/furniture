@@ -42,7 +42,7 @@ const Testimonial = () => {
 
     return (
         <section className="bg-white">
-            <div className="container mx-auto px-5 max-sm:px-3 pt-10 pb-28 ">
+            <div className="container mx-auto px-5 pt-10 pb-28 ">
                 <div className="flex flex-col items-center gap-4">
                     <span className="text-sm font-Gilroy-Medium text-secondary uppercase tracking-widest">Testimonial</span>
                     <h1 className="font-Gilroy-Bold max-sm:text-3xl text-4xl leading-tight text-[#1E1E1E]">Our Client Reviews</h1>
@@ -50,12 +50,11 @@ const Testimonial = () => {
                 <div className="mt-16">
                     <Swiper
                         slidesPerView={1}
-                        spaceBetween={40}
+                        spaceBetween={20}
                         speed={1000}
                         breakpoints={{
                             640: {
                                 slidesPerView: 2,
-                                spaceBetween: 20,
                             },
                             768: {
                                 slidesPerView: 3,
@@ -65,8 +64,8 @@ const Testimonial = () => {
                             }
                         }}
                     >
-                        {data.map(({ backgroundImage, content, image, jobTitle, name }, index) => <SwiperSlide key={index} className="">
-                            <div className="relative aspect-[11/16] rounded-2xl overflow-hidden cursor-pointer">
+                        {data.map(({ backgroundImage, content, image, jobTitle, name }, index) => <SwiperSlide key={index} className="!py-5">
+                            <div className="relative aspect-[11/16] rounded-2xl overflow-hidden cursor-pointer shadow-xl">
                                 <img draggable={false} src={backgroundImage} alt={'Testimonial Background Image'} className="w-full h-full object-cover" />
                                 <div className="absolute bottom-0 left-0 w-full h-full p-3 flex flex-col justify-end bg-[#1E1E1E] bg-opacity-20 duration-300 hover:bg-opacity-10">
                                     <div className="bg-white shadow-2xl px-3 pb-5 pt-9 rounded-xl relative">
