@@ -1,8 +1,8 @@
 import { BiSearch } from 'react-icons/bi';
 
 // assets
-import img1 from '../assets/hero-slide-1.jpg';
-import img2 from '../assets/hero-slide-2.jpg';
+import img1 from '../assets/hero-slide-1.webp';
+import img2 from '../assets/hero-slide-2.webp';
 import { useEffect, useRef } from 'react';
 
 const HeroArea = () => {
