@@ -50,11 +50,12 @@ const Testimonial = () => {
                 <div className="mt-16">
                     <Swiper
                         slidesPerView={1}
-                        spaceBetween={20}
+                        spaceBetween={40}
                         speed={1000}
                         breakpoints={{
                             640: {
                                 slidesPerView: 2,
+                                spaceBetween: 20,
                             },
                             768: {
                                 slidesPerView: 3,
