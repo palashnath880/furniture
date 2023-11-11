@@ -69,9 +69,12 @@ const Testimonial = () => {
                                 slidesPerView: 4
                             }
                         }}
-                        onBeforeInit={(swiper) => {
+                        onSwiper={(swiper) => {
                             swiper.params.navigation.prevEl = prevBtnRef.current;
                             swiper.params.navigation.nextEl = nextBtnRef.current;
+                            swiper.navigation.destroy();
+                            swiper.navigation.init();
+                            swiper.navigation.update();
                         }}
                         modules={[Navigation]}
                     // navigation={{
